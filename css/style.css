@@ -19,15 +19,27 @@
     }
 }
 
-.item {
+.europe {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.single {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 230px;
-    height: 200px;
+    max-width: 350px;
+    max-height: 350px;
     background: #ebebeb;
-    margin: 1rem;
+    margin: 20px;
+    padding: 20px;
     text-decoration: none;
-    color: var(--primary-colour);
-    font-size: 2rem;
+    color: #000;
+    font-size: 1.2em;
+}
+
+.flag {
+    
+    max-height: 150px;
 }

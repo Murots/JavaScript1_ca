@@ -66,7 +66,7 @@
 // getData();
 
 
-const countryContainer = document.querySelector(".categories");
+const countryContainer = document.querySelector(".europe");
 const url = "https://restcountries.com/v3.1/region/europe";
 
 async function fetchCountries() {
@@ -78,9 +78,13 @@ async function fetchCountries() {
 
     
     for (let i = 0; i < countryList.length; i++) {
-        const countryName = countryList[i].name.official;
-        countryContainer.innerHTML += `<a class="item" href="details.html?id=${countryName}">
-                                            <h2>${countryName}</h2>
+        const countryName = countryList[i].name.common;
+        const officialName = countryList[i].name.official
+        const flag = countryList[i].flags.png
+        countryContainer.innerHTML += `<a class="single" href="details.html?id=${countryName}">
+                                        <h2>${countryName}</h2>
+                                        <img src=${flag} class="flag"></img>
+                                        <p>Official: ${officialName}</p>
                                         </a>`;
     }
 }
