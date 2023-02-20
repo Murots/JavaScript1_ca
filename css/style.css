@@ -43,3 +43,10 @@
     
     max-height: 150px;
 }
+
+.error {
+    border: 1px solid darkred;
+    padding: 1rem;
+    color: darkred;
+    background: rgba(255, 0, 0, 0.1);
+}
