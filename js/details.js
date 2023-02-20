@@ -17,14 +17,20 @@ async function fetchCountry() {
         const countryDetails = await response.json();
         console.dir(countryDetails);
 
-        const capital = countryDetails.name;
-
         for (let i = 0; i < countryDetails.length; i++) {
+            const population = countryDetails[i].population;
             const capital = countryDetails[i].capital;
-            const language = countryDetails[i].languages;
+            const flag = countryDetails[i].flags.png;
+            const region = countryDetails[i].subregion;
+            const coatOfArms = countryDetails[i].coatOfArms.png;
 
-            countryInfo.innerHTML = `<h2>${capital}</h2>
-                                    <h2>${language}</h2>
+            countryInfo.innerHTML = `<p>Population: ${population}</p>
+                                    <p>Capital: ${capital}</p>
+                                    <p>Region: ${region}</p>
+                                    <p>Flag: <img src=${flag} class="flag"></img></p>
+                                    <p>Coat of arms: <img src=${coatOfArms} class="flag"></img></p>
+
+                                    
             `;
 
         }

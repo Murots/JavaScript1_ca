@@ -11,12 +11,13 @@ async function fetchCountries() {
         countryContainer.innerHTML = "";
     
         for (let i = 0; i < countryList.length; i++) {
-            const countryName = countryList[i].name.common;
+            const independent = countryList[i].independent;
 
-            if (countryName === "Svalbard and Jan Mayen") {
+            if (independent === false) {
                 continue;
             }
-
+            
+            const countryName = countryList[i].name.common;
             const officialName = countryList[i].name.official
             const flag = countryList[i].flags.png
 
