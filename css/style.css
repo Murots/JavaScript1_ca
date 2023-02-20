@@ -19,9 +19,16 @@
     }
 }
 
+.continent-container,
+header {
+    max-width: 1500px;
+    margin: auto;
+}
+
 .europe {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+
 }
 
 .single {
@@ -45,8 +52,9 @@
 }
 
 .error {
-    border: 1px solid darkred;
+    border: 2px solid rgb(129, 0, 0);
     padding: 1rem;
-    color: darkred;
-    background: rgba(255, 0, 0, 0.1);
+    color: rgb(129, 0, 0);
+    background: rgba(143, 40, 40, 0.301);
+    font-size: 1.2em;
 }

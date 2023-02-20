@@ -1,6 +1,6 @@
 
 const countryContainer = document.querySelector(".europe");
-const url = "https://restcountries.com/v3.1/region/euroope";
+const url = "https://restcountries.com/v3.1/region/europe";
 
 async function fetchCountries() {
     try {
@@ -19,14 +19,16 @@ async function fetchCountries() {
 
             const officialName = countryList[i].name.official
             const flag = countryList[i].flags.png
+
+            
             countryContainer.innerHTML += `<a class="single" href="details.html?id=${countryName}">
-                                            <h2>${countryName}</h2>
-                                            <img src=${flag} class="flag"></img>
-                                            <p>Official: ${officialName}</p>
+                                                <h2>${countryName}</h2>
+                                                <img src=${flag} class="flag"></img>
+                                                <p>Official: ${officialName}</p>
                                             </a>`;
         }
     }  catch (error) {
-        console.log("An error occurred");
+        console.log(error);
         countryContainer.innerHTML = errorMessage("Could not fetch data. Please try again later.");
     }
 }
