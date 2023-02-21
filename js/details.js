@@ -23,31 +23,39 @@ async function fetchCountry() {
             const flag = countryDetails[i].flags.png;
             const region = countryDetails[i].subregion;
             const coatOfArms = countryDetails[i].coatOfArms.png;
-            const borders = countryDetails[i].borders;
+            const timeZone = countryDetails[i].timezones;
+
+            if (!countryDetails[i].borders) {
+                borders = "Remote island";
+            } else {
+                borders = countryDetails[i].borders.join(", ");
+            }
 
             console.log(Object.values(countryDetails[i].languages));
-            const languages = Object.values(countryDetails[i].languages)
-            const currencies = countryDetails[i].currencies.name;
-            console.log(currencies);
+            const languageTest = Object.values(countryDetails[i].languages);
+            const languages = languageTest.join(", ");
+           
+            const currencies = countryDetails[i].currencies;
+            const currencyString = Object.values(currencies).map(function(currency) {
+                return currency.name;
+            });
+            console.log(currencyString);
 
-            countryInfo.innerHTML = `<div class="details_imgs">
-                                        <p>Flag: <img src=${flag} class="details-flag"></img></p>
-                                        <p>Coat of arms: <img src=${coatOfArms} class="details-flag"></img></p>
-                                    </div>
-                                    <div class="details_info">
+            countryInfo.innerHTML = `<div class="details_info">
                                         <p><span class="bold">Population:</span> ${population}</p>
                                         <p><span class="bold">Capital:</span> ${capital}</p>
                                         <p><span class="bold">Region:</span> ${region}</p>
-                                        <p><span class="bold">Borders:</span> ${borders}</p>
-                                        <p><span class="bold">Currencies:</span> ${currencies}</p>
+                                        <p><span class="bold">Currencies:</span> ${currencyString}</p>
                                         <p><span class="bold">Languages:</span> ${languages}</p>
+                                        <p><span class="bold">Borders:</span> ${borders}</p>
+                                        <p><span class="bold">Time zone:</span> ${timeZone}</p>
                                     </div>
+                                    <div class="details_imgs">
+                                        <p>Flag: <img src=${flag} class="details-flag"></img></p>
+                                        <p>Coat of arms: <img src=${coatOfArms} class="details-flag"></img></p>
+                                    </div>`;
                                     
-            `;
-
         }
-       
-
 
     } catch (error) {
         console.log(error);

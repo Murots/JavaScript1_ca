@@ -2,7 +2,7 @@
 /* Global 
 ---------------------------------------------------------------------------------------------------------------------------*/
 p {
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 
@@ -28,10 +28,10 @@ p {
 }
 
 .error {
-    border: 2px solid rgb(129, 0, 0);
+    border: 2px solid #810000;
     padding: 1rem;
-    color: rgb(129, 0, 0);
-    background: rgba(143, 40, 40, 0.301);
+    color: #810000;
+    background: #8f28284d;
     font-size: 1.2em;
 }
 
@@ -79,29 +79,42 @@ header {
 
 .country {
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    /* gap: 100px; */
+    background: #ebebeb;
+    padding: 50px 150px;
+    justify-items: center;
+    
+}
+
+.country p {
+    font-size: 1.5em;
 }
 
 .details_imgs {
     display: flex;
-    flex-direction: row; 
-    max-height: 300px;
+    flex-direction: column;  
 }
 
 .details_imgs p {
     display: flex;
     flex-direction: column; 
     font-weight: bold;
+    /* align-self: flex-end; */
+
 }
 
 .details-flag {
-    max-height: 100%;
-    position: relative;
+    max-height: 300px;
+    min-height: 150px;
+    max-width: 250px;
 }
 
 .details_info {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+}
+
+.details_info p{
+    margin-bottom: 60px;
 }
 
 .bold {
