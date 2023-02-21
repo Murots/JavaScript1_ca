@@ -1,3 +1,11 @@
+
+/* Global 
+---------------------------------------------------------------------------------------------------------------------------*/
+p {
+    font-size: 1.5em;
+}
+
+
 .loader {
     border: 16px solid #f3f3f3;
     border-top: 16px solid darkslategray;
@@ -18,6 +26,17 @@
         transform: rotate(360deg);
     }
 }
+
+.error {
+    border: 2px solid rgb(129, 0, 0);
+    padding: 1rem;
+    color: rgb(129, 0, 0);
+    background: rgba(143, 40, 40, 0.301);
+    font-size: 1.2em;
+}
+
+/* Index
+---------------------------------------------------------------------------------------------------------------------------*/
 
 .continent-container,
 header {
@@ -47,14 +66,46 @@ header {
 }
 
 .flag {
-    
     max-height: 150px;
 }
 
-.error {
-    border: 2px solid rgb(129, 0, 0);
-    padding: 1rem;
-    color: rgb(129, 0, 0);
-    background: rgba(143, 40, 40, 0.301);
-    font-size: 1.2em;
+/* Details 
+---------------------------------------------------------------------------------------------------------------------------*/
+
+.country-container {
+    max-width: 1500px;
+    margin: auto;
 }
+
+.country {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.details_imgs {
+    display: flex;
+    flex-direction: row; 
+    max-height: 300px;
+}
+
+.details_imgs p {
+    display: flex;
+    flex-direction: column; 
+    font-weight: bold;
+}
+
+.details-flag {
+    max-height: 100%;
+    position: relative;
+}
+
+.details_info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
