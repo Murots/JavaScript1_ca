@@ -5,6 +5,14 @@ p {
     font-size: 1em;
 }
 
+h1 {
+    font-size: 6em;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    margin: 30px 50px 20px 0px;
+    grid-column: 1;
+    grid-row: 1;
+}
 
 .loader {
     border: 16px solid #f3f3f3;
@@ -35,19 +43,62 @@ p {
     font-size: 1.2em;
 }
 
+body {
+    max-width: 1500px;
+    margin: 20px auto;
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    max-height: 400px;
+    grid-auto-rows: auto;
+    position: relative;
+}
+
+.line-vertical {
+    grid-row: 1 / span 2;
+    grid-column: 1;
+    border-right: 0.5px solid black;
+    height: 100px;
+    align-self: center;
+}
+  
+.line-horizontal {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    border-bottom: 0.5px solid black;
+    width: 70%;
+    justify-self: center;
+}
+
+nav {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: end;
+    margin-top: 20px;
+    max-height: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.nav-contact {
+    display: none;
+}
 /* Index
 ---------------------------------------------------------------------------------------------------------------------------*/
-
-.continent-container,
-header {
-    max-width: 1500px;
-    margin: auto;
-}
 
 .europe {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-
+    margin-left: -10px;
 }
 
 .single {
@@ -72,15 +123,9 @@ header {
 /* Details 
 ---------------------------------------------------------------------------------------------------------------------------*/
 
-.country-container {
-    max-width: 1500px;
-    margin: auto;
-}
-
 .country {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* gap: 100px; */
     background: #ebebeb;
     padding: 50px 150px;
     justify-items: center;
@@ -100,8 +145,7 @@ header {
     display: flex;
     flex-direction: column; 
     font-weight: bold;
-    /* align-self: flex-end; */
-
+    
 }
 
 .details-flag {
@@ -121,4 +165,9 @@ header {
     font-weight: bold;
 }
 
+/* Contact us 
+---------------------------------------------------------------------------------------------------------------------------*/
 
+.contact-heading {
+    white-space: nowrap;
+}
