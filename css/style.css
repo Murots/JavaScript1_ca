@@ -187,14 +187,17 @@ form {
     border-radius: 10px;
     max-width: 700px;
     margin: 0 auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-input {
+input,
+textarea {
     width: 100%;
     margin-top: 20px;
     margin-bottom: 2px;
     padding: 10px;
     font-size: 1em;
+    
 }
 
 button {
@@ -213,3 +216,12 @@ button {
     color: #bd0000;
     display: none;
 }
+
+textarea {
+    min-height: 250px;
+    font-family: inherit;
+    font-size: inherit;;
+    color: inherit;
+    
+}
+

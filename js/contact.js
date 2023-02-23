@@ -3,6 +3,13 @@ const firstName = document.querySelector("#firstName");
 const firstNameError = document.querySelector("#firstName-error");
 const lastName = document.querySelector("#lastName");
 const lastNameError = document.querySelector("#lastName-error");
+const subject = document.querySelector("#subject");
+const subjectError = document.querySelector("#subject-error");
+const formMessage = document.querySelector("#message");
+const formMessageError = document.querySelector("#message-error");
+
+const email = document.querySelector("#email");
+const emailError = document.querySelector("#email-error");
 
 function validateForm() {
     event.preventDefault();
@@ -19,7 +26,24 @@ function validateForm() {
         lastNameError.style.display = "block";
     }
 
+    if (checkLength(subject.value, 9) === true) {
+        subjectError.style.display = "none";
+    } else {
+        subjectError.style.display = "block";
+    }
     
+    if (checkLength(formMessage.value, 19) === true) {
+        formMessageError.style.display = "none";
+    } else {
+        formMessageError.style.display = "block";
+    }
+
+    if (validateEmail(email.value) === true) {
+        emailError.style.display = "none";
+    } else {
+        emailError.style.display = "block";
+    }
+
 }
 
 form.addEventListener("submit", validateForm);
@@ -31,3 +55,9 @@ function checkLength(value, len) {
         return false;
     }
 } 
+
+function validateEmail(email) {
+    const regEx = /\S+@\S+\.\S+/;
+    const patternMatches = regEx.test(email);
+    return patternMatches;
+}
