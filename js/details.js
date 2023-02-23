@@ -20,16 +20,28 @@ async function fetchCountry() {
         for (let i = 0; i < countryDetails.length; i++) {
             const population = countryDetails[i].population;
             const capital = countryDetails[i].capital;
-            const flag = countryDetails[i].flags.png;
+            const flag = countryDetails[0].flags.png;
             const region = countryDetails[i].subregion;
             const coatOfArms = countryDetails[i].coatOfArms.png;
-            const timeZone = countryDetails[i].timezones;
+            const timeZone = countryDetails[i].timezones.join(", ");
+            
 
             if (!countryDetails[i].borders) {
                 borders = "Remote island";
             } else {
                 borders = countryDetails[i].borders.join(", ");
             }
+
+            // const timeZone = countryDetails[i].timezones;
+            // if (timeZone.length > 1) {
+            //     timeZone = "Unknown or multiple";
+            // }
+
+            // if (countryDetails[i].timezones.length > 1) {
+            //     timeZone = "Multiple";
+            // } else {
+            //     timeZone = countryDetails[i].timezones;
+            // }
 
             console.log(Object.values(countryDetails[i].languages));
             const languageTest = Object.values(countryDetails[i].languages);
@@ -53,8 +65,7 @@ async function fetchCountry() {
                                     <div class="details_imgs">
                                         <p>Flag: <img src=${flag} class="details-flag"></img></p>
                                         <p>Coat of arms: <img src=${coatOfArms} class="details-flag"></img></p>
-                                    </div>`;
-                                    
+                                    </div>`;                          
         }
 
     } catch (error) {

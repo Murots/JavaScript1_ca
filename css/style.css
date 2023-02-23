@@ -37,7 +37,7 @@ h1 {
 
 .error {
     border: 2px solid #810000;
-    padding: 1rem;
+    padding: 20px;
     color: #810000;
     background: #8f28284d;
     font-size: 1.2em;
@@ -92,6 +92,7 @@ nav a {
 .nav-contact {
     display: none;
 }
+
 /* Index
 ---------------------------------------------------------------------------------------------------------------------------*/
 
@@ -155,6 +156,7 @@ nav a {
 }
 
 .details_info {
+    max-width: 600px;
 }
 
 .details_info p{
@@ -170,4 +172,39 @@ nav a {
 
 .contact-heading {
     white-space: nowrap;
+}
+
+.contact-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    background-color: #ebebeb;
+    padding: 50px
+}
+
+form {
+    padding: 25px 75px 30px 50px;
+    background: #fff;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+input {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 2px;
+    padding: 10px;
+    font-size: 1em;
+}
+
+button {
+    background: #0b5b85;
+    border: none;
+    width: 300px;
+    padding: 15px;
+    color: white;
+    margin-top: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
 }
