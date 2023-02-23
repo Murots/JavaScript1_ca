@@ -32,17 +32,6 @@ async function fetchCountry() {
                 borders = countryDetails[i].borders.join(", ");
             }
 
-            // const timeZone = countryDetails[i].timezones;
-            // if (timeZone.length > 1) {
-            //     timeZone = "Unknown or multiple";
-            // }
-
-            // if (countryDetails[i].timezones.length > 1) {
-            //     timeZone = "Multiple";
-            // } else {
-            //     timeZone = countryDetails[i].timezones;
-            // }
-
             console.log(Object.values(countryDetails[i].languages));
             const languageTest = Object.values(countryDetails[i].languages);
             const languages = languageTest.join(", ");
