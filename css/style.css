@@ -208,3 +208,8 @@ button {
     border-radius: 5px;
     font-size: 1em;
 }
+
+.form-error {
+    color: #bd0000;
+    display: none;
+}
