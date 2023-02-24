@@ -24,7 +24,8 @@ async function fetchCountry() {
             const region = countryDetails[i].subregion;
             const coatOfArms = countryDetails[i].coatOfArms.png;
             const timeZone = countryDetails[i].timezones.join(", ");
-            
+            const shortName = countryDetails[i].fifa;
+            console.dir(countryDetails[i].fifa);
 
             if (!countryDetails[i].borders) {
                 borders = "Remote island";
@@ -50,11 +51,13 @@ async function fetchCountry() {
                                         <p><span class="bold">Languages:</span> ${languages}</p>
                                         <p><span class="bold">Borders:</span> ${borders}</p>
                                         <p><span class="bold">Time zone:</span> ${timeZone}</p>
+                                        <p><span class="bold">Short:</span> ${shortName}</p>
                                     </div>
                                     <div class="details_imgs">
                                         <p>Flag: <img src=${flag} class="details-flag"></img></p>
                                         <p>Coat of arms: <img src=${coatOfArms} class="details-flag"></img></p>
-                                    </div>`;                          
+                                    </div>`;     
+                                    
         }
 
     } catch (error) {
@@ -65,4 +68,7 @@ async function fetchCountry() {
 }
 
 fetchCountry();
+
+
+
 

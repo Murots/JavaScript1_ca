@@ -160,7 +160,7 @@ nav a {
 }
 
 .details_info p{
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 .bold {
@@ -201,7 +201,7 @@ textarea {
 }
 
 button {
-    background: #0b5b85;
+    background: #086699;
     border: none;
     width: 300px;
     padding: 15px;
