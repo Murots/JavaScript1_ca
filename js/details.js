@@ -24,8 +24,12 @@ async function fetchCountry() {
             const region = countryDetails[i].subregion;
             const coatOfArms = countryDetails[i].coatOfArms.png;
             const timeZone = countryDetails[i].timezones.join(", ");
-            const shortName = countryDetails[i].fifa;
-            console.dir(countryDetails[i].fifa);
+            
+            if (!countryDetails[i].fifa) {
+                shortName = "Not provided";
+            } else {
+                shortName = countryDetails[i].fifa;
+            }
 
             if (!countryDetails[i].borders) {
                 borders = "Remote island";
@@ -68,7 +72,3 @@ async function fetchCountry() {
 }
 
 fetchCountry();
-
-
-
-
