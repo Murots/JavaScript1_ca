@@ -1,4 +1,5 @@
 const heading = document.querySelector(".country-heading");
+const title = document.querySelector("title")
 const countryInfo = document.querySelector(".country");
 
 const queryString = document.location.search;
@@ -7,6 +8,7 @@ const nameId = params.get("id");
 console.log(nameId);
 
 heading.innerHTML = nameId;
+title.innerHTML = "EuroPedia | " + nameId;
 
 const url = "https://restcountries.com/v3.1/name/" + nameId;
 console.log(url); 

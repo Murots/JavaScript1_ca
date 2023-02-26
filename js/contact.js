@@ -51,20 +51,6 @@ function validateForm() {
         emailError.style.display = "block";
     }
 
-    
-    // if (checkLength(firstName.value, 0) && checkLength(lastName.value, 3) && checkLength(subject.value, 9) && checkLength(formMessage.value, 19) && validateEmail(email.value)) {
-    //     const formData = new URLSearchParams();
-    //     formData.set("firstname", firstName.value);
-    //     formData.set("lastname", lastName.value);
-    //     formData.set("email", email.value);
-    //     formData.set("address", address.value);
-    //     formData.set("subject", subject.value);
-    //     formData.set("message", formMessage.value);
-
-    //     const queryString = formData.toString();
-    //     window.location.search = queryString;
-    // }
-
 }
 
 form.addEventListener("submit", validateForm);
