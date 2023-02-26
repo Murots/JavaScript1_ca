@@ -9,19 +9,7 @@ I find jsreally hard to understand, but i guess its all about practice, like eve
 ### Links
 
 Netlify:
-https://regal-khapse-ee253a.netlify.app/
-
-Github:
-https://github.com/Murots/Gamehub
-
-Figma Prototype:
-Mobile:
-
-https://www.figma.com/proto/kX9uYukw8mIx6eQpONrLLv/CA-Design-Mobile?page-id=151%3A443&node-id=151%3A444&viewport=189%2C380%2C0.31&scaling=scale-down&starting-point-node-id=151%3A444
-
-Web:
-
-https://www.figma.com/proto/rUwUVOE8tRCIGAK3fVgA9E/CA-Design-Web?page-id=171%3A2294&node-id=171%3A2295&viewport=331%2C408%2C0.28&scaling=scale-down&starting-point-node-id=171%3A2295
+https://dashing-praline-8b191d.netlify.app
 
 #### New references
 

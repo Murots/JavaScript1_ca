@@ -9,6 +9,20 @@ async function fetchCountries() {
         console.log(countryList);
 
         countryContainer.innerHTML = "";
+
+        countryList.sort(function(a, b) {
+            const countryA = a.name.common.toLowerCase();
+            const countryB = b.name.common.toLowerCase();
+          
+            if (countryA < countryB) {
+              return -1;
+            } else if (countryA > countryB) {
+              return 1;
+            } else if (countryA === countryB) {
+              return 0;
+            }
+        });
+        
     
         for (let i = 0; i < countryList.length; i++) {
             const independent = countryList[i].independent;
@@ -18,6 +32,7 @@ async function fetchCountries() {
             }
             
             const countryName = countryList[i].name.common;
+
             const officialName = countryList[i].name.official
             const flag = countryList[i].flags.png
 
