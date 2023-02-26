@@ -16,6 +16,9 @@ https://dashing-praline-8b191d.netlify.app
 Unknown. REST countries. [online]
 Available at: https://restcountries.com/ [Accessed 25 Feb. 2023]
 
+Unknown. w3schools. [online]
+Available at: https://www.w3schools.com/js/js_array_sort.asp [Accessed 26 Feb. 2023]
+
 Also all the learning videos from the course modules.
 
 ##### Authors
